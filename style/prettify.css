@@ -1,0 +1,28 @@
+/* Pretty printing styles. Used with prettify.js. */
+
+pre  { color: #fff;}
+.str { color: rgb(101,176,66); }
+.kwd { color: rgb(226,137,100); }
+.com { color: rgb(174,174,174); font-style: italic; }
+.typ { color: rgb(226,137,100); }
+.lit { color: rgb( 51,135,204); }
+.pun { color: #fff; }
+.pln { color: rgb(254,254,254); }
+.tag { color: rgb(226,137,100); }
+.atn { color: #606; }
+.atv { color: #080; }
+.dec { color: #606; }
+pre.prettyprint { padding: 2px; border: 1px solid #888; }
+
+@media print {
+  .str { color: #060; }
+  .kwd { color: #006; font-weight: bold; }
+  .com { color: #600; font-style: italic; }
+  .typ { color: #404; font-weight: bold; }
+  .lit { color: #044; }
+  .pun { color: #440; }
+  .pln { color: #000; }
+  .tag { color: #006; font-weight: bold; }
+  .atn { color: #404; }
+  .atv { color: #060; }
+}

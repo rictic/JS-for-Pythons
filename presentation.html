@@ -24,7 +24,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
   
-    <title>jQuery 1.4: What you need to know</title>
+    <title>Javascript for Pythons</title>
     <link rel="stylesheet" type="text/css" href="style/main.css" media="screen, projection" />
     <script type="text/javascript" src="script/jquery-1.4.2.js"></script>    
     <script type="text/javascript" src="script/jquery-easing-1.3.js"></script>
@@ -36,874 +36,909 @@
         out.fadeIn();
       }
     </script>
+    <link href="style/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="script/prettify.js"></script>
   </head>
-  <body>
+  <body onload="prettyPrint()">
     <div class="presentation">
       <div class="slides">
-        <div class="slide">
-          <section class="center intro">
-            <hgroup>
-              <h1>
-                jQuery 1.4
-              </h1>
-              <h2>
-                What you need to know
-              </h2>
-            </hgroup>
-            <p class="quiet">This presentation is an HTML5 website</p>
-          </section>
-        </div>
-                
-        <div class="slide">
-          <header>
-            <h1>Who are you?</h1>
-          </header>
-          <section>
-            <ul class="bullets">
-              <li>Matt Nowack</li>
-              <li>Associate Consultant</li>
-              <li>HMB Information System Developers</li>
-              <hr/>
-              <li>5 years experience in Web Design</li>
-              <li>Using jQuery for the last 3.5 years</li>
-              <li>First: Credit where credit is due</li>
-            </ul> 
-          </section>
-        </div>    
-        
-        <div class="slide">
-          <section class="center intro">
-            <hgroup>
-              <h3>Paul Irish: jQuery 1.4 Hawtness</h3>
-              <h3><a href="http://jquery14.com">http://jQuery14.com</a></h3>
-            </hgroup>
-          </section>
-        </div>
-        
-        <div class="slide">
-          <section class="center intro">
-            <h3>HTML5 presentation</h3>
-            <h4><a href="http://apirocks.com/html5/html5.html">http://apirocks.com/html5/html5.html</a></h4>
-          </section>
-        </div>
-        
-        <div class="slide">
-        	<header>
-        		<h1>jQuery History</h1>
-        	</header>
-        	<section>
-            <ul class="bullets">
-        			<li>Created by John Resig in 2006</li>
-        			<li>Lightweight, cross-browser JavaScript Library.</li>
-        			<li>Used by 30% of the Top 10,000 sites<a href="http://trends.builtwith.com/javascript/JQuery"><sup>1</sup></a></li>
-        		</ul>
-        		<img src="img/john-resig.png" style="float:right"/>
-        	</section>
-        </div>
-          
-        <div class="slide">
-        	<header>
-        		<h1>Who's using jQuery</h1>
-        	</header>
-        	<section>
-        		<ul class="bullets">
-        			<li>Microsoft ships jQuery with Visual Studio to support ASP.NET MVC</li>
-        			<li>Nokia uses jQuery with their widget platform</li>
-        			<li>Smalltalk's Seaside framework fully integrates jQuery</li>
-        			<li>Ruby on Rails is compatible with jQuery</li>
-        			<li>and many many more...</li>
-        		</ul>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-            <hgroup>
-          		<h1>Who Else?</h1>
-          	</hgroup>
-          </section>
-        </div>
-          
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/google.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/nbc.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-          
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/drupal.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/mlb.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/dell.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/cbs.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/technorati.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/wordpress.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/digg.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/netflix.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/bofa.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1><img src="img/logo/mozilla.png" /></h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<section class="intro center">
-        		<hgroup>
-        			<h1>jQuery 1.4 <br /> == <br /> Awesome to the Max</h1>
-        		</hgroup>
-        	</section>
-        </div>  
-        
-        <div class="slide">
-        	<header>
-        		<h1>Internal Changes</h1>
-        	</header>
-        	<section>
-            <ul class="bullets">
-        			<li>Tons of internal cleanup</li>
-        			<li>YUI Min <strong>OUT</strong>, Closure Compiler <strong>IN</strong></li>
-        			<li>Fragment Caching</li>
-        			<li>Pervasive Context</li>
-        		</ul>
-        	</section>
-        </div>
 
-        <div class="slide">
-        	<header>
-        		<h1>Modularization</h1>
-        	</header>
-          <section>
-          	<ul class="bullets">
-          		<li>Reduction of Interdependencies</li>
-          		<li>core is heading towards kernal</li>
-          		<li>$.ready moved to core</li>
-          	</ul>
-          </section>        	
-        </div>
-        
-        <div class="slide">
-        	<header>
-        		<h1>Minification</h1>
-        	</header>
-        	<section>
-        		<ul class="bullets">
-        			<li>YUI Minifier was replaced starting in 1.4</li>
-        			<li>Replaced by Google's Closure Compiler</li>
-        			<li>13% decrease in minified filesize</li>
-        		</ul>
-        	</section>
-        </div>
-        
-        <div class="slide">
-        	<header>
-        		<h1>Performance</h1>
-        	</header>
-        	<section>
-        		<ul class="bullets">
-        			<li>DOM Fragment Caching</li>
-        			<li>Pervasive use of context</li>
-        			<li>Internal helper methods and restructuring</li>
-        		</ul>
-        	</section>
-        </div>
-        
-        <div class="slide">
-        	<section class="intro center">
-            <hgroup>
-        	   <h1>New Stuff</h1>
-        	   <h2>Let's jump into some new features</h2>
-            </hgroup>
-        	</section>
-        </div>
-        
-        <div class="slide">
-        	<header>
-        		<h1>Improvements to $.live()</h1>
-        	</header>
-          <section>
-          	<ul class="bullets">
-          		<li>$.live() was introduced in version 1.3</li>
-          		<li>Similar to $.bind() but using dynamic event delegation</li>
-          		<li>Efficient and concise way to provide client-side interaction</li>
-          	</ul>
-          </section>
-        </div>
-        
-        <div class="slide">
-        	<script type="text/javascript">
-        	 $(function() {
-            $('select.example').live('change', function(e) {
-              show( 'Value changed to ' + $(this).val(), 'live-change-console' );
-            });           
-           });
-           
-           function appendLiveChange() {
-            $('div#live-change-area').append('<select class="example"><option>A</option><option>B</option><option>C</option></select>');
-           }
-          </script>
-          <header>
-        		<h1>Support for the "change" event</h1>
-        	</header>
-        	<section>
-            <pre>
-$('select.example').live('change', function(e) {
-  show( 'Value changed to ' + $(this).val(), 'live-change-console' );
-});
-            </pre>
-            <button onclick="appendLiveChange()">New Dropdown</button>
-            <div id="live-change-area">
-              <select class="example">
-                <option>Example</option>
-                <option>Sample</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div id="live-change-console">
-            </div>
-        	</section>
-        </div>
-        
-        <div class="slide">
-          <script type="text/javascript">
-            $(function() {
-              $('form.example').live('submit', function(e) {
-                show( e.target + ' has submitted', 'live-submit-console' );
-                return false;              
-              })
-            });
-          
-            function appendLiveSubmit() {
-              $('#live-submit-area').append('<form class="example"><input type="submit" value="me too" /></form>');              
-            }
-          </script>
-        	<header>
-        		<h1>Support for the "submit" event</h1>
-        	</header>
-        	<section>
-        		<pre>
-$('form.example').live('submit', function(e) {
-     show( e.target + ' has submitted', 'live-submit-console' );
-     return false;
-});            
-            </pre>
-            <button onclick="appendLiveSubmit()">New Form</button>
-            <div id="live-submit-area">
-              <form class="example">
-                <input type="submit" value="click me" />
-              </form>
-            </div>
-            <div id="live-submit-console">
-            </div>
-         	</section>
-        </div>
-        
-        <div class="slide">
-        	<script type="text/javascript">
-            $(function() {
-              $('input:text.example').live('focusout', function() {
-                  $(this).css('border', '10px dashed red');
-              });
-              
-              $('input:text.example').live('focusin', function() {
-                  $(this).css('border', 'none');
-              });
-            });
-            
-            function appendLiveFocus() {
-              $('#live-focus-area').append('<input class="example" type="text" />');
-            }
-          </script>
-          <header>
-        		<h1>Support for "focusin" and "focusout"</h1>
-        	</header>
-          <section>
-            <pre>
-$('input:text.example').live('focusout', function() {
-    $(this).css('border', '10px dashed red');
-});
 
-$('input:text.example').live('focusin', function() {
-    $(this).css('border', 'none');
-});
-            </pre>
-            <button onclick="appendLiveFocus()">New Textbox</button>
-            <div id="live-focus-area">
-              <input class="example" type="text" />
-            </div>
-          </section>
-        </div>
-        
-        <div class="slide">
-          <script type="text/javascript">
-            $(function() {
-              $('div.hoverbox').live('mouseenter', function(e) {
-                $(this).css('backgroundColor', 'red');
-              });
-              $('div.hoverbox').live('mouseleave', function(e) {
-                $(this).css('backgroundColor', 'blue');
-              });        	         	 
-            });
-            
-            function addLiveMouse() {
-              $('#live-mouse-area').append('<div class="hoverbox"></div>');
-            } 
-          </script>
-          <style type="text/css">
-            div.hoverbox {
-              height: 100px;
-              width: 100px;
-              border: 5px solid black;
-              margin: 20px;
-              float: left;
-            }
-          </style>
-        	<header>
-        		<h1>Support for "mouseenter" and "mouseleave"</h1>
-        	</header>
-        	<section>
-        	 <pre>
-$('div.hoverbox').live('mouseenter', function(e) {
-  $(this).css('backgroundColor', 'red');
-});
-$('div.hoverbox').live('mouseleave', function(e) {
-  $(this).css('backgroundColor', 'blue');
-});        	 
-        	 </pre>
-        	</section>
-        	<button onclick="addLiveMouse()">New Hoverbox</button>
-        	<div id="live-mouse-area">
-        	 <div class="hoverbox"></div>
-        	</div>
-        </div>
-        
-        <div class="slide">
-        	<script type="text/javascript">
-            $(function() {
-              $('p.example').live('myCustomEvent', function(e) {
-                $(this).text("Hi there!");
-              });
-            });
-            
-            function addLiveCustom() {
-              $('#live-custom-area').append('<p class="example">Yet Another Example</p>');
-            }        	                                   
-          </script>
-          <header>
-        		<h1>Support for custom events</h1>
-        	</header>
-        	<section>
-            <pre>
-$('p.example').live('myCustomEvent', function(e) {
-  $(this).text("Hi there!");
-});
 
-&lt;button onclick="$('p.example').trigger('myCustomEvent');"&gt;Trigger&lt;/button&gt;
-
-            </pre>
-            <button onclick="$('p.example').trigger('myCustomEvent');">Trigger</button>
-            <button onclick="addLiveCustom()">New Paragraph</button>
-            <div id="live-custom-area">
-              <p class="example">Example &lt;p&gt;</p>
-            </div>
-            <span></span>
-        	</section>
-        </div>
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Javascript for Pythons
+    </h1>
+<!--     <p class="quiet">This presentation is an HTML5 website</p> -->
+  </section>
+</div>
         
-        <div class="slide">
-        	<script type="text/javascript">
-            $(function() {
-              $('a.example', $('#live-context-area')[0]).live('click', function() { 
-                show( 'Hello', 'live-context-console'); 
-              });
-            });
-            
-            function addLiveContext() {
-              $('#live-context-area').append('<br /><a class="example">Another Anchor</a>');
-            }
-          </script>
-          
-          <style type="text/css">
-            a.example {
-              cursor: pointer;
-            }
-            
-            div#live-context-area {
-              border: 2px solid black;
-              padding: 10px;
-              border-radius: 10px;
-            }
-          </style>
-          
-          <header>
-        		<h1>Contexts lead to Performance Gain</h1>
-        	</header>
-        	<section>
-            <pre>
-$('a.example', $('#live-context-area')[0]).live('click', function() { 
-  show( 'Hello', 'live-context-console'); 
-});
-            </pre>
-            <button onclick="addLiveContext()">New Anchor</button>
-            <div id="live-context-area">
-              <a class="example">Example Anchor</a>
-            </div>
-            <div id="non-live-context-area">
-              <a class="example">Won't work!</a>
-            </div>
-            <div id="live-context-console">
-            </div>
-        	</section>
-        </div>
+<div class="slide">
+  <section class='center intro'>
+    <hgroup>
+      <h1>Who are you?</h1>
+      <h2>What are you doing in my house?</h2>
+    </hgroup>
+  </section>
+</div>    
 
-        <div class="slide">
-          <section class="intro center">
-            <hgroup>
-              <h1>That's it for $.live()</h1>
-              <br />
-              <h1>On to Setters!</h1>
-            </hgroup>
-          </section>
-        </div>
 
-        <div class="slide">
-        	<header>
-        		<h1>Improvements to Setter Functions</h1>
-        	</header>
-          <section>
-          	<ul class="bullets">
-          		<li>Setter functions have been around since the beginning</li>
-          		<li>Includes things like .html(...) .val(...) .attr('something', '...')</li>
-          		<li>jQuery 1.4 changes the API to make them more versatile and powerful</li>  
-          	</ul>
-          	<hr />
-          	<div>Let's look at an example!</div>
-          </section>
-        </div>
-        
-        <div class="slide">
-          <header>
-            <h1>Old 1.3 Way</h1>
-          </header>
-          <section>
-            <pre>
-$('a.setter').attr('href', function() {
-  var newhref = $(this).attr('href') + '?' + +new Date();
-  $(this).attr('href', newhref);                        
-});
-            </pre>
-            <div>Works fine, kind of cumbersome</div>
-            <div>If only there were a better way...</div>
-          </section>
-        </div>
-                                       
-        <div class="slide">
-          <header>
-            <h1>New Rocket Sauce in 1.4</h1>
-          </header>
-          <section>
-            <pre>
-$('a.setter').attr('href', function(i, href) {
-  return href + '?' + +new Date();
-});
-            </pre>
-            <div>Compare with</div>
-            <pre>
-$('a.setter').attr('href', function() {
-  var newhref = $(this).attr('href') + '?' + +new Date();
-  $(this).attr('href', newhref);                        
-});
-            </pre>
-          </section>       
-        </div>
-        
-        <div class="slide">
-          <header>
-            <h1>What now?!</h1>
-          </header>
-          <section>
-            <pre>
-$('a.setter').attr('href', function(<span class="js">i</span>, <span class="html">href</span>) {
-  <span class="css">return href + '?' + +new Date()</span>;
-});
-            </pre>
-            <div>The function is now passed an <span class="js">index</span> and the <span class="html">current value</span></div>
-            <div>The attribute is set to the <span class="css">return value</span></div>
-            <br />
-            <div>Rocket Sauce</div>
-          </section>       
-        </div>
-        
-        <div class="slide">
-          <header>
-            <h1>Setters with Current Value</h1>
-          </header>
-          <section>
-            <ul class="bullets" style="float: left">
-              <li>.css()</li>
-              <li>.attr()</li>
-              <li>.val()</li>
-              <li>.html()</li>
-              <li>.text()</li>
-              <li>.append()</li>
-            </ul>
-            <ul class="bullets" style="float: left; margin-left: 80px">
-              <li>.prepend()</li>
-              <li>.offset()</li>
-              <li>.addClass()</li>
-              <li>.removeClass()</li>
-              <li>.toggleClass()</li>
-            </ul>
-          </section>
-        </div>
-                                       
-        <div class="slide">
-          <header>
-            <h1>Setters without Current Value</h1>
-          </header>
-          <section>
-            <ul class="bullets">
-              <li>.before()</li>
-              <li>.after()</li>
-              <li>.replaceWith()</li>
-              <li>.wrap()</li>
-              <li>.wrapInner()</li>
-            </ul>
-          </section>
-        </div>
-        
-        <div class="slide">
-          <header>
-            <h1>One more example</h1>
-          </header>
-          <section>
-            <pre>
-$('a').html(function(i, html) {
-  return html.replace( /&amp;amp;/gi, '&lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;');
-});
-            </pre>
-            <div>Wrap all &amp;'s with span tags to allow for styling</div>
-          </section>
-        </div>
-        
-        <div class="slide">
-        	<section class="center intro">
-        		<hgroup>
-              <h1>Time for some shiny</h1>
-              <br /><br />
-              <h1>ANIMATIONS!</h1>
-            </hgroup>
-        	</section>
-        </div>
+<div class="slide">
+  <section class='center intro'>
+    <hgroup>
+      <h1>Wait no.</h1>
+    </hgroup>
+  </section>
+</div>    
 
-        <div class="slide">
-          <script type="text/javascript">
-            function animateBothLinear() {
-              $('#animateTarget').animate({width: "+=200px", height: "+=200px"}, 1000, "linear");
-            }
-            
-            function animateBothBounce() {
-              $('#animateTarget').animate({width: "+=200px", height: "+=200px"}, 1000, "easeOutBounce");
-            }
-            
-            function animatePerProperty() {
-              $('#animateTarget').animate({width: ["+=200px", "linear"], height: ["+=200px", "easeOutBounce"]}, 1000);
-            }
-            
-            function animateReset() {
-              $('#animateTarget').animate({width: 100, height: 100}, 0);
-            }
-          </script>
-          <style type="text/css">
-            div#animateTarget {
-              height: 100px;
-              width: 100px;
-              border: 10px solid black;
-            }
-          </style>
-          <header>
-            <h1>Per-property easing</h1>
-          </header>
-          <section>
-            <pre>
-$('#animateTarget').animate({
-    width: ["+=200px", "linear"], 
-    height: ["+=200px", "easeOutBounce"]
-  }, 1000);        
-            </pre>
-            <button onclick="animateBothLinear()">Both Linear</button>
-            <button onclick="animateBothBounce()">Both Bounce</button>
-            <button onclick="animatePerProperty()">Per Property</button>
-            <button onclick="animateReset()">Reset</button>
-            <div id="animateTarget"></div>
-          </section>
-        </div>
+
+<div class="slide">
+  <section class='center intro'>
+    <hgroup>
+      <h1>Javascript.</h1>
+    </hgroup>
+  </section>
+</div>    
+
+
+<div class="slide">
+  <section class='center intro'>
+    <hgroup>
+      <h1>Scary?</h1>
+    </hgroup>
+  </section>
+</div>    
+
+<div class="slide">
+  <section class='center intro'>
+    <hgroup>
+      <h1>Not scary!</h1>
+    </hgroup>
+  </section>
+</div>    
+
+
+<div class="slide">
+  <section class='center intro'>
+    <hgroup>
+      <h1>Very simple!</h1>
+    </hgroup>
+  </section>
+</div>    
+
+<div class="slide">
+	<header>
+		<h1>Types</h1>
+	</header>
+	<section>
+    <ul class="bullets">
+			<li>Array                  </li>
+      <li>Boolean                </li>
+      <li>Date                   </li>
+      <li>Number                 </li>
+      <li>String                 </li>
+      <li>RegExp                 </li>
+      <li>And of course Object and Function</li>
+		</ul>
+	</section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      That's it!*
+    </h1>
+    <p >*May contain lies</p>
+  </section>
+</div>
+
+
+<div class="slide">
+	<header>
+		<h1>Boolean</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js'>
+      
+      true;
+      false;
+      //simple, no?
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>String</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js'>
+      
+      "hi"; 
+      'hello there';
+      //immutable, nothing that would surprise a python
+      
+      
+      
+      
+      //looping through a string is a little lower level though:
+      var s = "hello";
+      for (var i = 0; i < s.length; i++) {
+      	s.charAt(i);
+      }
+    </pre>
+	</section>
+</div>
+
+
+
+
+<div class="slide">
+	<header>
+		<h1>Number</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js'> 
+      0;        
+      1 + 1;    
+      1.5 * 10;      
+      2e100 > 100000;          //scientific notation!
+      010 == 8;                //octal!
+      0xdeadbeef > 0xcafebabe  //hex!
+      
+      //always floating point.  always.  
+      //so all of the caveats of working with floating point apply
+
+      //ordinary sized integers work fine, but extreme positive
+      //and negative numbers are kinda sloppy
+      
+      
+    </pre>
+	</section>
+</div>
+
+
+<div class="slide">
+	<header>
+		<h1>Date</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js'> 
+      
+      new Date() // => Thu, 03 Jun 2010 09:40:03 GMT
+      new Date().valueOf() // => 1275558432262
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>RegExp</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js'> 
+      
+      /abc/.test("I'll use abc somewhere in here") 
+      // => true
+
+      "hello world".match(/hello (dolly|world)/)[1] 
+      // => "world"
+      
+      "salutations humans".replace(/human/g, "weakling") 
+      //=> "salutations weaklings"
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Array</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js'> 
+      
+      [];  
+      [1,2,3]; 
+      ['a',1,true]
+      var a = [1,2,3];
+      a.push(4)           //             a is now [1,2,3,4]
+      a.pop()             // returns 4.  a is now [1,2,3]
+      a.shift()           // returns 1.  a is now [2,3]
+      a.unshift("potato") //             a is now ['potato', 2,3]
+      a[1]                // returns 2.
+      a[1] = 5            //             a is now ['potato', 5, 3]
+    </pre>
+	</section>
+</div>
+
+
+<div class="slide">
+	<header>
+		<h1>Object</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js'> 
+      
+      var o = {
+        "ghastly": ["ghost","psychic"],
+        "charizard": ["fire", "dragon"],
+        "mudkip": ["water", "useless"]
+      }
+      
+      o.ghastly === o['ghastly']
+      o['mud' + 'kip']
+
+      //JSON objects!  A lot like Python dicts 
+
+      //Used a lot like dicts too.
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Syntax
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Pretty bland really
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Syntax</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js'> 
+      var a = 0;
+      while(a &lt; 100) {
+        a += 1;
+      }
+      
+      switch(1+1){
+        case 2: 'good!'; break;
+        default: 'bad!';
+      }
+      
+      //don't actually need to put quotes around keys
+      //in object literals
+      var o = {
+        ghastly:   ["ghost","psychic"],
+        charizard: ["fire", "dragon"],
+        mudkip:    ["water", "useless"]
+      }
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>More Syntax</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js'> 
+      for (var i = 10; i > 0; i--) {
+        dance();
+      }
+      
+      //like Python, this is
+      //special syntax only used for
+      //iterating through objects &amp; arrays
+      for (var key in o) {
+        var value = o[key];
+      }
+      //unlike Python, it *only* iterates through keys,
+      //never through values, so:
+      for (var index in ['a','b','c']) {
+        alert(index); //pops up 0 then 1 then 2
+      }
+      
+      //everywhere else the 'in' keyword 
+      //tests to see if the object has the key
+      if (key in o) {
         
-        <div class="slide">
-          <script type="text/javascript">
-            function showNotice() {
-              $('#notice').fadeIn().delay(3000).fadeOut();
-            }          
-          </script>
-          <style type="text/css">
-            div#notice {
-              display: none;
-              width: 290px;
-              height: 70px;
-              background: white;
-              border: 4px solid black;
-            }
-          </style>
-          <header>
-            <h1>New $.delay API</h1>
-          </header>
-          <section>
-            <pre>
-$('#notice').fadeIn().delay(3000).fadeOut();
-            </pre>
-            <button onclick="showNotice()">Show Notice</button>
-            <div id="notice">I'm the notice!</div>
-          </section>                 
-        </div>
-
-        <div class="slide">
-          <script type="text/javascript">
-          function cqStart() {
-            $('#cqTarget')
-              .slideDown()
-              .slideUp()
-              .slideDown()
-              .slideUp()
-              .slideDown()
-              .slideUp()
-              .slideDown()
-              .slideUp()
-              .slideDown();
-          }
-          
-          function cqStop() {
-            $('#cqTarget').stop(true);
-          }
-          
-          function cqClearQueue() {
-            $('#cqTarget').clearQueue();
-          }
-          
-          function cqReset() {
-            $('#cqTarget').animate({width: '300px', height: '300px'}, 0);
-          }
-          
-          </script>
-          <style type="text/css">
-          #cqTarget {
-            border: 10px solid black;
-            height: 300px;
-            width: 300px; 
-          }
-          </style>
-          <header>
-            <h1>clearQueue: animation anti-lock brakes</h1>
-          </header>
-          <section>
-            <pre>
-$('#cqTarget').clearQueue();
-            </pre>
-            <button onclick="cqStart()">Start</button>
-            <button onclick="cqStop()">Stop</button>
-            <button onclick="cqClearQueue()">Clear Queue</button>
-            <button onclick="cqReset()">Reset</button>
-            <div id="cqTarget"></div>
-          </section>
-        </div>
+      }
         
-        <div class="slide">
-          <section class="center intro">
-            <hgroup>
-              <h1>Enough shiny</h1>
-              <h2>Let's talk multi-bind</h2>
-            </hgroup>
-          </section>
-        </div>
+    </pre>
+	</section>
+</div>
 
-        <div class="slide">
-          <script type="text/javascript">
-            $(function() {
-              $('#multi-bind').bind({
-                click: function() {
-                  $(this).text('Mouse Clicked');
-                },
-                mouseenter: function() {
-                  $(this).text('Mouse Entered');
-                },
-                mouseleave: function() {
-                  $(this).text('Mouse Left');
-                }
-              });
-            });  
-          </script>
-          <header>
-            <h1>Seriously, write less, do more</h1>
-          </header>
-          <section>
-            <pre>
-$('#multi-bind').bind({
-  click: function() {
-    $(this).text('Mouse Clicked');
-  },
-  mouseenter: function() {
-    $(this).text('Mouse Entered');
-  },
-  mouseleave: function() {
-    $(this).text('Mouse Left');
-  }
-});
-            </pre>
-            <div id="multi-bind">I'm bound to lot's of things</div>
-        </div>
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      That's pretty much everything!
+    </h1>
+  </section>
+</div>
 
-        <div class="slide">
-          <section class="center intro">
-            <hgroup>
-              <h1>Last but not least</h1>
-            </hgroup>
-          </section>
-        </div>
-        
-        <div class="slide">
-          <script type="text/javascript">
-            function appendElem() {
-              var div = $("<div/>", {
-                id: 'example',
-                css: {
-                  height: '100px',
-                  width:  '100px',
-                  color:  'blue',
-                  backgroundColor: 'green'
-                },
-                click: function() {
-                  $(this).css('backgroundColor', 'red');
-                }
-              });
-              $('#element-area').append(div);
-            }
-          </script>
-          <header>
-            <h1>New Element Creation syntax</h1>
-          </header>
-          <section>
-            <pre>
-var div = $('&lt;div/&gt;', {
-  id: 'example',
-  css: {
-    height: '100px',
-    width:  '100px',
-    color:  'blue',
-    backgroundColor: 'green'
-  },
-  click: function() {
-    $(this).css('backgroundColor', 'red');
-  }
-});          
-// &lt;div id="example" 
-//      style="height: 100px; width: 100px; color: blue; background: green"
-//      onclick="$(this).css('backgroundColor', 'red');"&gt;
-            </pre>
-            <button onclick="appendElem()">Append it</button>
-            <div id="element-area">
-            </div>
-          </section>
-        </div>    
 
-        <div class="slide">
-          <section class="center intro">
-            <hgroup>
-              <h1>Thank you</h1>
-              <h2>Go get your jQuery on</h2>
-            </hgroup>
-          </section>
-        </div>
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      ...except Functions, Namespacing, Methods, Classes
+    </h1>
+  </section>
+</div>
 
-        <div class="slide">
-          <section class="center intro">
-            <hgroup>
-              <h1>Fork Me</h1>
-              <h3><a href="http://github.com/ihumanable/stir-trek-2010-jquery-14">http://github.com/ihumanable</a></h3>
-            </hgroup>
-          </section>
-        </div>
+<div class="slide">
+	<header>
+		<h1>A Function!</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'> 
+      
+      function scream() {
+        alert("HELLO AND WELCOME TO MY WEB-SITE");
+      }
+      
+      scream();
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>An Argument!</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'> 
+      
+      function scream(name) {
+        alert("HELLO AND WELCOME TO MY WEB-SITE " + name);
+      }
+      
+      scream("Steve");
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>All Arguments Are Optional</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'> 
+      
+      function scream(name) {
+        alert("HELLO AND WELCOME TO MY WEB-SITE " + name);
+      }
+      
+      scream();
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>All Arguments Are Optional</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'> 
+      
+      function scream(name) {
+        alert("HELLO AND WELCOME TO MY WEB-SITE " + (name || "WEB-VISITOR"));
+      }
+      
+      scream();
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>All Arguments Are Optional</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'> 
+      
+      function scream(name, years) {
+        alert("HELLO AND WELCOME TO MY WEB-SITE " + (name || "WEB-VISITOR"));
+        if (years &amp;&amp; years > 0)
+          alert("YOU'VE BEEN ON THE WORLD WIDE WEB TOO LONG FRIEND GET SOME FRESH AIR")
+      }
+      
+      scream("Steve");
+      scream("Fooley", 2);
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Variable Number of Arguments</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'> 
+      
+      function sum() {
+        var result = 0;
+        for (var i = 0; i &lt; arguments.length; i++)
+          result += arguments[i];
+        return result;
+      }
+      
+      print(sum(1,2,3,4))
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Namespaces
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      What's a namespace?
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      You must declare your variables.
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      You MUST declare your variables.
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Or you'll stomp all over the global namespace.
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Fortunately, it's easy.
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Just use <span class='kwd'>var</span>
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Scoping</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'> 
+      
+      //every function is a namespace.  functions are the
+      //only way to make a namespace
+      //and new variables are added to a namespace with var
+      
+      var a = 'global';
+      function f() {
+        var a = 'local';
+        function g() {
+          a += ' and inner too'
+          return a;
+        }
+        return g;
+      }
+      
+      var inner_g = f();
+      inner_g(); //"local and inner too"
+      inner_g(); //"local and inner too and inner too"
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Methods
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      What's a method?
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Just a function on an object.
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>What's a method?</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+
+      //extremely boring object
+      var o = {};
+      
+      o.speak = function() {
+        return "kupo";
+      }
+      
+      o.speak(); // "kupo"
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Then where did <br>my <span class='kwd'>self</span> go??
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      ... and who's this shifty looking <span class='kwd'>this</span> character?
+    </h1>
+  </section>
+</div>
+
+
+<div class="slide">
+	<header>
+		<h1>Methods</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+
+      //extremely boring object
+      var o = {word: "skreee"};
+      
+      o.speak = function() {
+        return this.word;
+      }
+      
+      o.speak(); // "skreee"
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Quick gotcha
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1><span class='kwd'>this</span> and inner functions</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+
+      //extremely boring object
+      var o = {word: "skreee"};
+      
+      o.speak = function() {
+        function yell() {
+          return this.word.toUpperCase(); //error!
+        }
+        return yell();
+      }
+      
+      o.speak(); // "skreee"
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Classes
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Ok, class-like behavior
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Every function can be called as a constructor
+    </h1>
+    <h3>This was a language design mistake, but we've gotta live with it now<h3>
+  </section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Constructor</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+
+      function Mammal() {
+        this.furry = true;
+      }
+      
+      var m = new Mammal();
+      m.furry === true;
+      
+    </pre>
+	</section>
+</div>
+
+
+<div class="slide">
+	<header>
+		<h1>Constructor</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+
+      function Mammal() {
+        //this = {};
+        //this.__proto__ = Mammal
+        this.furry = true;
+        //return this
+      }
+      
+      var m = new Mammal();
+      m.furry === true;
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Constructor</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+
+      function Mammal() {
+        this.furry = true;
+      }
+      
+      var m = Mammal();
+      m === undefined;
+      window.furry === true;
+      
+    </pre>
+	</section>
+</div>
+
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Convention for Constructors
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <hgroup>
+      <h1>
+        Prototypes
+      </h1>
+      <h2>
+        Kinda like inheritance
+      </h2>
+    </hgroup>
+  </section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Constructor</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+
+      function Mammal() {
+        this.furry = true;
+      }
+      
+      function Buffalo() {
+        this.size = "huge";
+      }
+      Buffalo.prototype = new Mammal();
+      
+      var b = new Buffalo();
+      b.furry === true;
+      b.size  === "huge";
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Constructor</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+
+      function Mammal() {
+        this.furry = true;
+      }
+      
+      function Buffalo() {
+        this.size = "huge";
+        var k = Math.random();
+      }
+      Buffalo.prototype = new Mammal();
+      Buffalo.prototype.dance = function() {
+        if (this.size === "huge")
+          alert("oh god he's breaking everything");
+      }
+      
+      var b = new Buffalo();
+      b.furry === true;
+      b.size  === "huge";
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Object.create</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+
+      Object.create = function create(o) {
+      	var F = function () {};
+      	F.prototype = o;
+      	return new F();
+      }
+
+
+      var mammal = {furry: true};
+
+      var buffalo = Object.create(mammal);
+
+      buffalo.size = "huge";
+
+      var b1 = Object.create(buffalo);
+      
+    </pre>
+	</section>
+</div>
+
+<!-- find bounds for integer numbers  -->
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Debugging
+    </h1>
+    
+    <h4>Or: Don't use alerts!</h4>
+  </section>
+</div>
+<div class="slide">
+	<header>
+		<h1>Web Inspector!</h1>
+	</header>
+	<section>
+    <div>
+      <br><br>
+      <img src="img/web_inspector.png" width="791" height="255" alt="Web Inspector">
+    </div>
+	</section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Surprises for Pythons
+    </h1>
+  </section>
+</div>
+
+<div class="slide">
+	<header>
+		<h1>Javascript rarely throws errors</h1>
+	</header>
+	<section>
+    <pre class='prettyprint lang-js runnable'>       
+      
+      a = [1,2,3]
+      a[1000] // returns undefined
+      a.length // returns 3
+      a[5000] = 10
+      a.length // returns 5001
+      a[1000] // still undefined
+
+      o = {"ghastly": ["ghost","psychic"],
+       "charizard": ["fire", "dragon"],
+       "mudkip": ["water", "useless"]
+      }
+      o.kadabra // undefined
+      o['alakazam'] //also undefined
+      
+    </pre>
+	</section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <h1>
+      Equality is shallow
+    </h1>
+  </section>
+</div>
+
+
+
+
+
+<div class="slide">
+  <section class="center intro">
+    <hgroup>
+      <h3><a href="http://code.google.com/p/gmaps-utility-library-dev/wiki/JavascriptCodingConventions">Google Coding Conventions</a></h3>
+    </hgroup>
+  </section>
+</div>
+
+<div class="slide">
+  <section class="center intro">
+    <hgroup>
+      <h1>Fork Me</h1>
+      <h3><a href="http://github.com/rictic/javascript-for-pythons">http://github.com/rictic</a></h3>
+    </hgroup>
+  </section>
+</div>
         
       </div> 
     </div> 
